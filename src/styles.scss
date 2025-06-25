@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: white;;
+}
+
+:host-context(.dark-theme) {
+    h1 {
+        background-color: black;
+        color: white;
+    }
+}

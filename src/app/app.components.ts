@@ -7,11 +7,28 @@ import { NewComponent } from './components/new-component/new-component';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, NewComponent],
-  template: `
-    
+  styles: [
+    `
+      h1 {
+        color: red;
+        font-size: 2rem;
+      }
+      .dark-theme {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    `
+  ],
+  template: 
+  `
     <h1>Curso de Angular</h1>
-    Antigo: <app-new-component></app-new-component>
-    Novo: <app-new-component />
+    <div class="dark-theme">
+      <h2>Meu primeiro projeto</h2>
+      <p>Este é o meu primeiro projeto com Angular!</p>
+    </div>
+    <app-new-component />
     {{ title }}
   `,
 })
